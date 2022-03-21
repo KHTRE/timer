@@ -1,0 +1,9 @@
+.Timer {
+  width: 82px;
+  text-align: end;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 26%;
+  left: 29.5%;
+}
