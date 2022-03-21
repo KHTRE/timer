@@ -1,0 +1,22 @@
+.Power-button-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 29px;
+  background-image: url(../../images/buttons_block.png);
+}
+
+.Power-button-block__button {
+  height: 24px;
+  width: 48px;
+  background-image: url(../../images/power_off.png);
+
+  &--on {
+    background-image: url(../../images/power_on.png);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

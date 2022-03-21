@@ -1,0 +1,29 @@
+.Toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 17px;
+  background-image: url(../../images/toggle.png);
+  
+  &__button {    
+    height: 16px;
+    width: 16px;
+    background-image: url(../../images/toggler.png);
+  }
+}
+
+.toggler {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1px;
+  width: 30px;
+
+  &--hrs {
+    justify-content: flex-end;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

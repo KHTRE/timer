@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import './App.css';
-import Timer from './components/Timer/Timer';
+import './App.scss';
+import Screen from './components/Screen/Screen';
+import Toggle from './components/Toggle/Toggle';
+import Slider from './components/Slider/Slider';
+import PowerButton from './components/PowerButton/PowerButton';
+import TimeButtonsBlock from './components/TimeButtonsBlock/TimeButtonsBlock';
 
 const App: React.FC = () => {
   const [powerOn, togglePowerOn] = useState(false);
   const [time, setTime] = useState(0);
   const [minHrsToggler, toggleMinHrs] = useState('MIN');
-  const maxTime = 100;
+  const maxTime = 9999;
 
   const togglePower = () => {
     togglePowerOn((prevPowerOn) => {
@@ -65,56 +69,30 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      {powerOn && <img className="clock" src="./images/Clock_simple.svg" alt="clock" />}
-      <button className="power-button" type="button" onClick={togglePower}>
-        {powerOn ? <img src="./images/Pwr_on.png" alt="power button" />
-          : <img src="./images/Pwr_off.png" alt="power button" />}
-      </button>
-
-      <div className="buttons-block">
-        <button type="button" onClick={upTime}>
-          <img src="./images/Up_btn.png" alt="up time button" />
-        </button>
-        <button type="button" onClick={downTime}>
-          <img src="./images/Down_btn.png" alt="down time button" />
-        </button>
+      <div className="power-button-container">
+        <PowerButton powerOn={powerOn} togglePower={togglePower} />
       </div>
 
-      {powerOn && <Timer time={time} />}
-
-      {powerOn && <span className="min-hrs">{minHrsToggler}</span>}
-
-      <div
-        role="button"
-        tabIndex={0}
-        className={minHrsToggler === 'MIN' ? 'toggler' : 'toggler--hrs'}
-        onClick={handleMinHrsToggle}
-        onKeyDown={handleMinHrsToggle}
-      >
-        <img src="./images/toggle.png" alt="toggle min / hrs" />
+      <div className="time-buttons-block-container">
+        <TimeButtonsBlock upTime={upTime} downTime={downTime} />
       </div>
 
-      <input
-        className="range-back"
-        type="range"
-        min="0"
-        max={maxTime}
-        value={time}
-        name="range"
-        step="1"
-        disabled={!powerOn}
-      />
-      <input
-        className="range"
-        type="range"
-        min="0"
-        max={maxTime}
-        value={time}
-        name="range"
-        step="1"
-        onChange={handleRangeChange}
-        disabled={!powerOn}
-      />
+      <div className="screen-container">
+        <Screen time={time} powerOn={powerOn} minHrsToggler={minHrsToggler} />
+      </div>
+
+      <div className="toggle-container">
+        <Toggle minHrsToggler={minHrsToggler} handleMinHrsToggle={handleMinHrsToggle} />
+      </div>
+
+      <div className="slider-container">
+        <Slider
+          maxTime={maxTime}
+          time={time}
+          powerOn={powerOn}
+          handleRangeChange={handleRangeChange}
+        />
+      </div>
     </div>
   );
 };

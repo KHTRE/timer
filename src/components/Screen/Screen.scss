@@ -1,0 +1,41 @@
+$color-blue: #8ddce0;
+
+.Screen {
+  display: flex;
+  align-items: center;
+  top: 26px;
+  left: 26px;
+  height: 64px;
+  width: 191px;
+  background-image: url(../../images/screen.png);
+
+  &__clock {
+    width: 57px;
+    height: 57px;
+    background-image: url(../../images/clock.png);
+  }
+
+  &__min-hrs {
+    display: block;
+    width: min-content;
+    color: white;
+    text-shadow: 0 0 5px $color-blue, 0 0 10px $color-blue, 0 0 15px $color-blue, 0 0 20px $color-blue, 0 0 30px $color-blue;
+    transform: translateY(50%);
+  }
+
+  &__timer {
+    display: block;
+    width: 89px;
+    text-align: end;
+    font-size: 40px;
+    color: white;
+    text-shadow: 0 0 5px #8ddce0, 0 0 10px #8ddce0, 0 0 15px #8ddce0, 0 0 20px #8ddce0, 0 0 30px #8ddce0;
+  }
+
+  &__digits-container {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+}
+

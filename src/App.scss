@@ -1,0 +1,55 @@
+@font-face {
+  font-family: DS-DIGI;
+  src: url(./fonts/DS-DIGI.TTF);
+}
+
+@font-face {
+  font-family: DS-DIGI;
+  font-weight: bold;
+  src: url(./fonts/DS-DIGIB.TTF);
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.App {
+  position: relative;
+  height: 148px;
+  width: 308px;
+  background-image: url(./images/device.png);
+  font-family: DS-DIGI, sans-serif;
+}
+
+.screen-container {
+  position: absolute;
+  top: 26px;
+  left: 26px;
+}
+
+.time-buttons-block-container {
+  position: absolute;
+  left: 230px;
+  top: 26px;
+}
+
+.power-button-container {
+  position: absolute;
+  left: 230px;
+  top: 61px;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 104px;
+  left: 26px;
+}
+
+.slider-container {
+  position: absolute;
+  top: 105px;
+  left: 115px;
+}
