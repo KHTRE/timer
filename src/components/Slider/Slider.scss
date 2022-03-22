@@ -125,3 +125,37 @@ _:-ms-fullscreen, :root .Slider__range {
     color: transparent;
   }
 }
+
+@supports (-moz-appearance:none) {
+  .Slider__range {
+    position: relative;
+    top: -22px;
+
+    &::-moz-range-thumb {
+      width: 15px;
+      height: 15px;
+      border: none;
+      background-color: transparent;
+      background-image: url(../../images/toggler.png);
+    }
+  }
+
+  .Slider__range-back { 
+    position: relative;
+    top: -5px;
+    width: 155px; 
+
+    &::-moz-range-thumb {
+      width: 5px;
+      height: 5px;
+      border: none;
+      background-color: transparent;
+    }
+
+    &::-moz-range-progress {           
+      height: 5px;
+      background-color: $color-blue;
+      border-radius: 5px;
+    }
+  }
+}
