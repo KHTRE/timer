@@ -17,10 +17,18 @@
 
     &--up {
       background-image: url(../../images/up_btn.png);
+
+      &:active {
+        background-image: url(../../images/up_btn_active.png);
+      }
     }
 
     &--down {
       background-image: url(../../images/down_btn.png);
+
+      &:active {
+        background-image: url(../../images/down_btn_active.png);
+      }
     }
   }
 }
