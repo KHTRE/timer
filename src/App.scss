@@ -1,12 +1,8 @@
 @font-face {
   font-family: DS-DIGI;
-  font-weight: bold;
-  src: url(./fonts/DS-DIGIB.TTF);
-}
-
-@font-face {
-  font-family: DS-DIGI;
-  src: url(./fonts/DS-DIGI.TTF);
+  src: url('./fonts/DS-Digital.woff2') format('woff2');
+  src: url('./fonts/DS-Digital.eot?#iefix') format('eot');
+  src: url('./fonts/DS-Digital.woff') format('woff');
 }
 
 button {

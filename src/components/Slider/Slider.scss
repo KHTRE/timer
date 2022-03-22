@@ -37,6 +37,7 @@ $color-blue: #8ddce0;
 .Slider__range-back {
   position: relative;
   top: -7px;
+  left: 1px;
   overflow: hidden;
   width: 165px;
   height: 5px;
@@ -73,5 +74,54 @@ $color-blue: #8ddce0;
 
   &::-ms-fill-upper {
     background-color: transparent;
+  }
+}
+
+_:-ms-fullscreen, :root .Slider__range-back { 
+  position: absolute;
+  top: -16px;  
+  left: 3px;
+  width: 160px;
+
+  &::-ms-thumb {
+    display: none;
+  }
+
+  &::-ms-fill-lower {
+    background-color: $color-blue;
+    border-radius: 5px;
+  }
+
+  &::-ms-track {
+    border: none;
+    color: transparent;
+    background-color: transparent;
+  }
+}
+
+_:-ms-fullscreen, :root .Slider__range {
+  height: 15px; 
+  position: absolute;
+  top: -21px;
+
+  &::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background: url(../../images/toggler.png);
+    border: none;
+  }
+
+  &::-ms-fill-lower {
+    display: none;
+  }
+
+  &::-ms-track {
+    border: none;
+    color: transparent;
+    background-color: transparent;
+  }
+
+  &::-ms-ticks-before {
+    color: transparent;
   }
 }
